@@ -1,4 +1,3 @@
-// File: /components/TaskTable.jsx
 import React from "react";
 
 const statusStyles = {
@@ -13,13 +12,13 @@ const TaskTable = ({ tasks }) => {
       <table className="min-w-full divide-y divide-gray-200 border border-gray-300 rounded-lg shadow-sm">
         <thead className="bg-gray-100">
           <tr>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
               Task Title
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider hidden sm:table-cell">
               Description
             </th>
-            <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+            <th className="px-4 py-3 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
               Assigned Users (Status)
             </th>
           </tr>
@@ -38,13 +37,13 @@ const TaskTable = ({ tasks }) => {
           ) : (
             tasks.map((task) => (
               <tr key={task.id} className="hover:bg-gray-50 transition">
-                <td className="px-6 py-4 align-top whitespace-normal text-gray-800 font-medium max-w-xs">
+                <td className="px-4 py-4 align-top whitespace-normal text-gray-800 font-medium max-w-xs">
                   {task.title}
                 </td>
-                <td className="px-6 py-4 align-top whitespace-normal text-gray-700 max-w-xl">
+                <td className="px-4 py-4 align-top whitespace-normal text-gray-700 max-w-xl hidden sm:table-cell">
                   {task.description}
                 </td>
-                <td className="px-6 py-4 align-top max-w-sm">
+                <td className="px-4 py-4 align-top max-w-sm">
                   {task.submissions.map((submission) => (
                     <div
                       key={submission.userId}

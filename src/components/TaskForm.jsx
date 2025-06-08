@@ -32,34 +32,37 @@ const TaskForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block font-semibold mb-1">Task Title</label>
+        <label className="block font-semibold mb-2">Task Title</label>
         <input
           type="text"
-          className="w-full border border-gray-300 rounded px-3 py-2"
+          className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
+          placeholder="Enter task title"
         />
       </div>
 
       <div>
-        <label className="block font-semibold mb-1">Description</label>
+        <label className="block font-semibold mb-2">Description</label>
         <textarea
-          className="w-full border border-gray-300 rounded px-3 py-2"
+          className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          rows={3}
+          placeholder="Enter task description (optional)"
         />
       </div>
 
       <div>
-        <label className="block font-semibold mb-1">
+        <label className="block font-semibold mb-2">
           Assign Users (comma separated userIds)
         </label>
         <input
           type="text"
-          className="w-full border border-gray-300 rounded px-3 py-2"
+          className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           value={assignedUsers}
           onChange={(e) => setAssignedUsers(e.target.value)}
           placeholder="e.g. user1, user2"
@@ -68,20 +71,21 @@ const TaskForm = () => {
       </div>
 
       <div>
-        <label className="block font-semibold mb-1">Reward Points</label>
+        <label className="block font-semibold mb-2">Reward Points</label>
         <input
           type="number"
           min="1"
-          className="w-full border border-gray-300 rounded px-3 py-2"
+          className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           value={points}
           onChange={(e) => setPoints(Number(e.target.value))}
           required
+          placeholder="Enter reward points"
         />
       </div>
 
       <button
         type="submit"
-        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+        className="w-full sm:w-auto bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
       >
         Create Task
       </button>

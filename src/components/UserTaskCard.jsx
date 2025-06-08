@@ -1,4 +1,3 @@
-// File: /components/UserTaskCard.jsx
 import React, { useState } from "react";
 import { useTaskContext } from "../context/TaskContext";
 
@@ -32,9 +31,11 @@ const UserTaskCard = ({ task, submission, userId }) => {
   };
 
   return (
-    <div className="border border-gray-300 rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow bg-white">
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{task.title}</h3>
-      <p className="text-gray-700 mb-4">{task.description}</p>
+    <div className="border border-gray-300 rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow bg-white max-w-full">
+      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 break-words">
+        {task.title}
+      </h3>
+      <p className="text-gray-700 mb-4 whitespace-pre-wrap break-words">{task.description}</p>
 
       <p className="mb-4">
         Status:{" "}
@@ -49,7 +50,7 @@ const UserTaskCard = ({ task, submission, userId }) => {
         <video
           src={videoURL}
           controls
-          className="w-full max-w-lg rounded border border-gray-300 mb-4"
+          className="w-full max-w-full sm:max-w-lg rounded border border-gray-300 mb-4"
         />
       ) : (
         !canUpload && (

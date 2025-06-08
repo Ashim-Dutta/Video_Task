@@ -13,9 +13,9 @@ const UserDashboard = ({ userId }) => {
   const userPoints = getUserPoints(userId);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-extrabold text-gray-900 mb-6 border-b pb-2">
-        User Dashboard - <span className="text-blue-600">{userId}</span>
+    <div className="p-4 sm:p-6 max-w-4xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6 border-b pb-2">
+        User Dashboard - <span className="text-blue-600 break-words">{userId}</span>
       </h1>
 
       <div className="mb-6 text-right text-lg font-semibold text-green-700">
