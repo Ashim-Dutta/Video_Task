@@ -58,14 +58,14 @@ const TaskForm = () => {
 
       <div>
         <label className="block font-semibold mb-2">
-          Assign Users (comma separated userIds)
+          Assign User Name
         </label>
         <input
           type="text"
           className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
           value={assignedUsers}
           onChange={(e) => setAssignedUsers(e.target.value)}
-          placeholder="e.g. user1, user2"
+          placeholder="e.g. Ashim"
           required
         />
       </div>
